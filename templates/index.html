@@ -1,0 +1,22 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quote Scraper</title>
+</head>
+<body>
+    <h1>MONIR'S SCRAPER TOOL</h1>
+
+    <form action="/scrape" method="post">
+        <button type="submit">SCRAPE QUOTES</button>
+    </form>
+
+    <ul>
+        {% for quote in quotes %}
+            <li>
+                <strong>{{ quote.author }}</strong>: "{{ quote.text }}"
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
